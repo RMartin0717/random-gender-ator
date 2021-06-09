@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import Form from '../Form/Form'
+import { getWords } from '../../utilities/APICalls'
 
 class App extends Component {
   constructor(props) {
