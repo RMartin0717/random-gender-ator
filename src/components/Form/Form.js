@@ -10,23 +10,30 @@ class Form extends Component {
     }
   }
 
+  handleChange = (e) => {
+    console.log(e)
+    this.setState({ [e.target.name]: e.target.value })
+  }
+
   render() {
     return (
       <>
         <form>
-          <label for='vibe-select'>Choose a vibe:</label>
-          <select name='vibes' id='vibe-select'>
+          <label htmlFor='vibe-select'>Choose a vibe:</label>
+          <select name='vibe' id='vibe-select' onChange={e => this.handleChange(e)}>
             <option value=''>--Please select a vibe--</option>
             <option value='trash'>Trash</option>
             <option value='sparkle'>Sparkle</option>
+            <option value='sparkle-trash'>A Bit of Both</option>
           </select>
-          <label for='entity-select'>Choose an entity:</label>
-          <select name='vibes' id='entity-select'>
+          <label htmlFor='entity-select'>Choose an entity:</label>
+          <select name='entity' id='entity-select' onChange={e => this.handleChange(e)}>
             <option value=''>--Please select an entity--</option>
-            <option value='trash'>Animal</option>
-            <option value='sparkle'>Extraterrestrial</option>
+            <option value='animal'>Animal</option>
+            <option value='extraterrestrial'>Extraterrestrial</option>
+            <option value='animal-extraterrestrial'>A Bit of Both</option>
           </select>
-          <button>New Gender Please</button>
+          <button onClick={console.log('this.props.getWords(animal)')}>New Gender Please</button>
         </form>
       </>
     )
