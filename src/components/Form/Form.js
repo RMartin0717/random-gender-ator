@@ -10,9 +10,15 @@ class Form extends Component {
     }
   }
 
-  handleChange = (e) => {
-    console.log(e)
-    this.setState({ [e.target.name]: e.target.value })
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value })
+  }
+
+  handleClick = (event) => {
+    event.preventDefault()
+    //need to get a random element from each array
+    //need to run updateGender with these new terms
+    this.props.updateGender(this.state.vibe, this.state.entity)
   }
 
   render() {
@@ -33,7 +39,7 @@ class Form extends Component {
             <option value='extraterrestrial'>Extraterrestrial</option>
             <option value='animal-extraterrestrial'>A Bit of Both</option>
           </select>
-          <button onClick={console.log('this.props.getWords(animal)')}>New Gender Please</button>
+          <button onClick={(event) => this.handleClick(event)}>New Gender Please</button>
         </form>
       </>
     )
