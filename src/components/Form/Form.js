@@ -13,9 +13,11 @@ class Form extends Component {
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value })
   }
+
   handleClick = (event) => {
     event.preventDefault()
-    console.log("fish")
+    //need to get a random element from each array
+    //need to run updateGender with these new terms
     this.props.updateGender(this.state.vibe, this.state.entity)
   }
 
