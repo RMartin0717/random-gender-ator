@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import Form from '../Form/Form'
-import { getWords } from '../../utilities/APICalls'
+// import { getWords } from '../../utilities/APICalls'
 
 class App extends Component {
   constructor(props) {
@@ -12,11 +12,15 @@ class App extends Component {
     }
   }
 
+  updateGender = (vibe, entity) => {
+    this.setState({ currentGender: `${vibe} ${entity}`})
+  }
+
   render() {
     return (
       <>
         <h1>The Random Gender-ator</h1>
-        <Form />
+        <Form updateGender={this.updateGender}/>
       </>
     )
   }
