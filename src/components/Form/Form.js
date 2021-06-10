@@ -16,8 +16,6 @@ class Form extends Component {
 
   handleClick = (event) => {
     event.preventDefault()
-    //need to get a random element from each array
-    //need to run updateGender with these new terms
     this.props.updateGender(this.state.vibe, this.state.entity)
   }
 

@@ -13,7 +13,20 @@ class App extends Component {
   }
 
   updateGender = (vibe, entity) => {
+    const oneAnimal = this.getAWord('animals')
+    console.log(oneAnimal)
     this.setState({ currentGender: `${vibe} ${entity}`})
+  }
+
+  getAWord = (category) => {
+
+    console.log(category, "category")
+    const word = this.state[category][this.getRandomIndex(0, this.state[category].length - 1)]
+    console.log(word, "word")
+  }
+
+  getRandomIndex = (min, max) => {
+     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
   componentDidMount = async () => {
