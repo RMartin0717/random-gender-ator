@@ -13,9 +13,9 @@ class App extends Component {
     }
   }
 
-  favGender = (gender) => {
-    this.setState({ genders: [...this.state.genders, gender]})
-
+  saveGender = (gender, id) => {
+    const newGender = { gender: gender, id: id }
+    this.setState({ genders: [...this.state.genders, newGender]})
   }
 
   delGender = (id) => {
@@ -47,6 +47,11 @@ class App extends Component {
      return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
+  createID = () => {
+    const id = Date.now()
+    return id
+  }
+
   componentDidMount = async () => {
     try {
       const fetchedAnimals = await getWords('animal');
@@ -70,12 +75,12 @@ class App extends Component {
       <>
         <h1>The Random Gender-ator</h1>
         <Form updateGender={this.updateGender}/>
-        {this.state.currentGender &&
-          <Card
-            gender={this.state.currentGender} favGender={this.favGender}
-            delGender={this.delGender}
-          />
-        }
+        <Card
+          gender={this.state.currentGender}
+          id={this.createID()}
+          saveGender={this.saveGender}
+          delGender={this.delGender}
+        />
       </>
     )
   }
