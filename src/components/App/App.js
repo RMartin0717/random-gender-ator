@@ -13,6 +13,12 @@ class App extends Component {
     }
   }
 
+  favGender = (gender, id) => {
+    const newGender = { gender: gender, id: id }
+    //write conditional to toggle between saving and deleting from genders array
+    this.setState({ genders: [...this.state.genders, newGender]})
+  }
+
   updateGender = (vibe, entity) => {
     const oneVibe = this.getAWord(vibe)
     const oneEntity = this.getAWord(entity)
@@ -67,7 +73,7 @@ class App extends Component {
         <h1>The Random Gender-ator</h1>
         <Form updateGender={this.updateGender}/>
         {this.state.currentGender &&
-          <Card />
+          <Card gender={this.state.currentGender} id={this.createID()} favGender={this.favGender}/>
         }
       </>
     )
