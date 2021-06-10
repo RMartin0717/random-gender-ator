@@ -25,7 +25,8 @@ class App extends Component {
   updateGender = (vibe, entity) => {
     const oneVibe = this.getAWord(vibe)
     const oneEntity = this.getAWord(entity)
-    this.setState({ currentGender: `${oneVibe} ${oneEntity}`})
+    const id = Date.now()
+    this.setState({ currentGender: { gender:`${oneVibe} ${oneEntity}`, id: id }})
   }
 
   getAWord = (category) => {
@@ -77,7 +78,7 @@ class App extends Component {
         <Form updateGender={this.updateGender}/>
         <Card
           gender={this.state.currentGender}
-          id={this.createID()}
+          id={this.state.currentGender}
           saveGender={this.saveGender}
           delGender={this.delGender}
         />
