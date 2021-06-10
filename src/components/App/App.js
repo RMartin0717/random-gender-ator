@@ -13,19 +13,40 @@ class App extends Component {
   }
 
   updateGender = (vibe, entity) => {
-    this.setState({ currentGender: `${vibe} ${entity}`})
+    const oneVibe = this.getAWord(vibe)
+    const oneEntity = this.getAWord(entity)
+    this.setState({ currentGender: `${oneVibe} ${oneEntity}`})
+  }
+
+  getAWord = (category) => {
+    if (category.includes('-')) {
+      const subCategories = category.split('-')
+
+      const firstWord = this.state[subCategories[0]][this.getRandomIndex(0, this.state[subCategories[0]].length - 1)]
+
+      const secondWord = this.state[subCategories[1]][this.getRandomIndex(0, this.state[subCategories[1]].length - 1)]
+
+      return `${firstWord}-${secondWord}`
+    }
+    const word = this.state[category][this.getRandomIndex(0, this.state[category].length - 1)]
+
+    return word
+  }
+
+  getRandomIndex = (min, max) => {
+     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
   componentDidMount = async () => {
     try {
       const fetchedAnimals = await getWords('animal');
-      this.setState({ animals: fetchedAnimals.associations_array })
+      this.setState({ animal: fetchedAnimals.associations_array })
 
       const fetchedAliens = await getWords('extraterrestrial');
-      this.setState({ extraterrestrials: fetchedAliens.associations_array })
+      this.setState({ extraterrestrial: fetchedAliens.associations_array })
 
       const fetchedSparkles = await getWords('sparkle');
-      this.setState({ sparkles: fetchedSparkles.associations_array })
+      this.setState({ sparkle: fetchedSparkles.associations_array })
 
       const fetchedTrash = await getWords('trash');
       this.setState({ trash: fetchedTrash.associations_array })
