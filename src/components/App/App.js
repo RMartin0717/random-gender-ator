@@ -19,6 +19,16 @@ class App extends Component {
   }
 
   getAWord = (category) => {
+    if (category === 'sparkle-trash') {
+      const sparkleWord = this.state.sparkle[this.getRandomIndex(0, this.state.sparkle.length - 1)]
+      const trashWord = this.state.trash[this.getRandomIndex(0, this.state.trash.length - 1)]
+      return `${sparkleWord}-${trashWord}`
+    }
+    if (category === 'animal-extraterrestrial') {
+      const animalWord = this.state.animal[this.getRandomIndex(0, this.state.animal.length - 1)]
+      const extraterrestrialWord = this.state.extraterrestrial[this.getRandomIndex(0, this.state.extraterrestrial.length - 1)]
+      return `${animalWord}-${extraterrestrialWord}`
+    }
     const word = this.state[category][this.getRandomIndex(0, this.state[category].length - 1)]
     return word
   }
