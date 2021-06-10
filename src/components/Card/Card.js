@@ -1,17 +1,17 @@
 import React from 'react'
 import './Card.css'
 
-const Card = ({ gender, id, saveGender, delGender }) => {
+const Card = ({ currentGender, id, saveGender, delGender }) => {
   return(
     <>
-      {!gender &&
+      {!currentGender &&
         <h2>No Gender Yet</h2>
       }
-      {gender &&
-        <div className='gender-card' id={gender.id}>
-          <h3>{gender.gender}</h3>
-          <button className='save-button' onClick={(event) => saveGender(gender.gender, gender.id)}>Save Gender</button>
-          <button className='delete-button' onClick={(event) => delGender(gender.id)}>Delete Gender</button>
+      {currentGender &&
+        <div className='gender-card' id={currentGender.id}>
+          <h3>{currentGender.gender}</h3>
+          <button className='save-button' onClick={(event) => saveGender(currentGender.gender, currentGender.id)}>Save Gender</button>
+          <button className='delete-button' onClick={(event) => delGender(currentGender.id)}>Delete Gender</button>
         </div>
       }
     </>
