@@ -16,10 +16,14 @@ class App extends Component {
   saveGender = (gender, id) => {
     const newGender = { gender: gender, id: id }
     this.setState({ genders: [...this.state.genders, newGender]})
+    //only save if not already in the array
   }
 
   delGender = (id) => {
-    console.log('delete')
+    const removeGender = this.state.genders.filter(gender => {
+      return gender.id !== id
+    })
+    this.setState({ genders: removeGender })
   }
 
   updateGender = (vibe, entity) => {
@@ -77,7 +81,7 @@ class App extends Component {
         <h1>The Random Gender-ator</h1>
         <Form updateGender={this.updateGender}/>
         <Card
-          gender={this.state.currentGender}
+          currentGender={this.state.currentGender}
           id={this.state.currentGender}
           saveGender={this.saveGender}
           delGender={this.delGender}
