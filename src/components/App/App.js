@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import Form from '../Form/Form'
+import Card from '../Card/Card'
 import { getWords } from '../../utilities/APICalls'
 
 class App extends Component {
@@ -37,6 +38,11 @@ class App extends Component {
      return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
+  createID = () => {
+    const id = Date.now()
+    return id
+  }
+
   componentDidMount = async () => {
     try {
       const fetchedAnimals = await getWords('animal');
@@ -61,7 +67,7 @@ class App extends Component {
         <h1>The Random Gender-ator</h1>
         <Form updateGender={this.updateGender}/>
         {this.state.currentGender &&
-          <h2>{this.state.currentGender}</h2>
+          <Card />
         }
       </>
     )
