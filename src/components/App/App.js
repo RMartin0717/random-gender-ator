@@ -13,10 +13,13 @@ class App extends Component {
     }
   }
 
-  favGender = (gender, id) => {
-    const newGender = { gender: gender, id: id }
-    //write conditional to toggle between saving and deleting from genders array
-    this.setState({ genders: [...this.state.genders, newGender]})
+  favGender = (gender) => {
+    this.setState({ genders: [...this.state.genders, gender]})
+
+  }
+
+  delGender = (id) => {
+    console.log('delete')
   }
 
   updateGender = (vibe, entity) => {
@@ -44,11 +47,6 @@ class App extends Component {
      return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  createID = () => {
-    const id = Date.now()
-    return id
-  }
-
   componentDidMount = async () => {
     try {
       const fetchedAnimals = await getWords('animal');
@@ -73,7 +71,10 @@ class App extends Component {
         <h1>The Random Gender-ator</h1>
         <Form updateGender={this.updateGender}/>
         {this.state.currentGender &&
-          <Card gender={this.state.currentGender} id={this.createID()} favGender={this.favGender}/>
+          <Card
+            gender={this.state.currentGender} favGender={this.favGender}
+            delGender={this.delGender}
+          />
         }
       </>
     )
