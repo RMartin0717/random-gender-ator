@@ -15,8 +15,11 @@ class App extends Component {
 
   saveGender = (gender, id) => {
     const newGender = { gender: gender, id: id }
-    this.setState({ genders: [...this.state.genders, newGender]})
-    //only save if not already in the array
+    if (this.state.genders.find(gender => gender.id === newGender.id)) {
+        return
+    } else {
+      this.setState({ genders: [...this.state.genders, newGender]})
+    }
   }
 
   delGender = (id) => {
