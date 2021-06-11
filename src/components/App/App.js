@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
+import Header from '../Header/Header'
 import Form from '../Form/Form'
 import Card from '../Card/Card'
 import AllCards from '../AllCards/AllCards'
@@ -83,7 +84,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <h1>The Random Gender-ator</h1>
+        <Header />
         <Route
           exact path='/'
           render={() => {
