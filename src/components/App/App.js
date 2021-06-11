@@ -100,9 +100,10 @@ class App extends Component {
           render={() => {
             return (
               <>
+                <h3>Home</h3>
                 <Form updateGender={this.updateGender}/>
                 <Card
-                  currentGender={this.state.currentGender}
+                  gender={this.state.currentGender}
                   id={this.state.currentGender}
                   saveGender={this.saveGender}
                   delGender={this.delGender}
@@ -112,7 +113,11 @@ class App extends Component {
           }}
         />
         <Route path='/savedgenders'>
-          <AllCards genders={this.state.genders} />
+          <AllCards
+            genders={this.state.genders}
+            saveGender={this.saveGender}
+            delGender={this.delGender}
+          />
         </Route>
     </>
     )
