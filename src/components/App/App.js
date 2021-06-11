@@ -97,33 +97,33 @@ class App extends Component {
       <>
         <Header />
         <Switch>
-        <Route
-          exact path='/'
-          render={() => {
-            return (
-              <>
-                <h3>Home</h3>
-                <Form updateGender={this.updateGender}/>
-                <Card
-                  gender={this.state.currentGender}
-                  id={this.state.currentGender}
-                  saveGender={this.saveGender}
-                  delGender={this.delGender}
-                />
-              </>
-            )
-          }}
-        />
-        <Route path='/savedgenders'>
-          <AllCards
-            genders={this.state.genders}
-            saveGender={this.saveGender}
-            delGender={this.delGender}
+          <Route
+            exact path='/'
+            render={() => {
+              return (
+                <>
+                  <h3>Home</h3>
+                  <Form updateGender={this.updateGender}/>
+                  <Card
+                    gender={this.state.currentGender}
+                    id={this.state.currentGender}
+                    saveGender={this.saveGender}
+                    delGender={this.delGender}
+                  />
+                </>
+              )
+            }}
           />
-        </Route>
-        <Route>
-         <Error error={`Page not found. Click 'Home' to return to the main page.`} />
-       </Route>
+          <Route path='/savedgenders'>
+            <AllCards
+              genders={this.state.genders}
+              saveGender={this.saveGender}
+              delGender={this.delGender}
+            />
+          </Route>
+          <Route>
+           <Error error={`Page not found. Click 'Home' to return to the main page.`} />
+         </Route>
       </Switch>
     </>
     )
