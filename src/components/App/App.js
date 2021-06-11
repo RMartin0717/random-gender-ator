@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import './App.css'
+import Header from '../Header/Header'
 import Form from '../Form/Form'
 import Card from '../Card/Card'
+import AllCards from '../AllCards/AllCards'
+import { Route } from 'react-router-dom'
 import { getWords } from '../../utilities/APICalls'
 
 class App extends Component {
@@ -19,6 +22,7 @@ class App extends Component {
         return
     } else {
       this.setState({ genders: [...this.state.genders, newGender]})
+      localStorage.setItem('genders', JSON.stringify([...this.state.genders, newGender]));
     }
   }
 
@@ -27,9 +31,13 @@ class App extends Component {
       return gender.id !== id
     })
     this.setState({ genders: removeGender })
+    localStorage.setItem('genders', JSON.stringify(removeGender));
   }
 
   updateGender = (vibe, entity) => {
+    if (!vibe || !entity) {
+      return
+    }
     const oneVibe = this.getAWord(vibe)
     const oneEntity = this.getAWord(entity)
     const id = Date.now()
@@ -45,10 +53,11 @@ class App extends Component {
       const secondWord = this.state[subCategories[1]][this.getRandomIndex(0, this.state[subCategories[1]].length - 1)]
 
       return `${firstWord}-${secondWord}`
-    }
-    const word = this.state[category][this.getRandomIndex(0, this.state[category].length - 1)]
+    } else {
+      const word = this.state[category][this.getRandomIndex(0, this.state[category].length - 1)]
 
-    return word
+      return word
+    }
   }
 
   getRandomIndex = (min, max) => {
@@ -61,6 +70,10 @@ class App extends Component {
   }
 
   componentDidMount = async () => {
+    if (JSON.parse(localStorage.getItem('genders'))) {
+      const storedGenders = JSON.parse(localStorage.getItem('genders'))
+      this.setState({ genders: storedGenders })
+    }
     try {
       const fetchedAnimals = await getWords('animal');
       this.setState({ animal: fetchedAnimals.associations_array })
@@ -81,15 +94,32 @@ class App extends Component {
   render() {
     return (
       <>
-        <h1>The Random Gender-ator</h1>
-        <Form updateGender={this.updateGender}/>
-        <Card
-          currentGender={this.state.currentGender}
-          id={this.state.currentGender}
-          saveGender={this.saveGender}
-          delGender={this.delGender}
+        <Header />
+        <Route
+          exact path='/'
+          render={() => {
+            return (
+              <>
+                <h3>Home</h3>
+                <Form updateGender={this.updateGender}/>
+                <Card
+                  gender={this.state.currentGender}
+                  id={this.state.currentGender}
+                  saveGender={this.saveGender}
+                  delGender={this.delGender}
+                />
+              </>
+            )
+          }}
         />
-      </>
+        <Route path='/savedgenders'>
+          <AllCards
+            genders={this.state.genders}
+            saveGender={this.saveGender}
+            delGender={this.delGender}
+          />
+        </Route>
+    </>
     )
   }
 }
