@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import './App.css'
 import Form from '../Form/Form'
 import Card from '../Card/Card'
+import AllCards from '../AllCards/AllCards'
+import { Route } from 'react-router-dom'
 import { getWords } from '../../utilities/APICalls'
 
 class App extends Component {
@@ -82,14 +84,26 @@ class App extends Component {
     return (
       <>
         <h1>The Random Gender-ator</h1>
-        <Form updateGender={this.updateGender}/>
-        <Card
-          currentGender={this.state.currentGender}
-          id={this.state.currentGender}
-          saveGender={this.saveGender}
-          delGender={this.delGender}
+        <Route
+          exact path='/'
+          render={() => {
+            return (
+              <>
+                <Form updateGender={this.updateGender}/>
+                <Card
+                  currentGender={this.state.currentGender}
+                  id={this.state.currentGender}
+                  saveGender={this.saveGender}
+                  delGender={this.delGender}
+                />
+              </>
+            )
+          }}
         />
-      </>
+        <Route path='/savedgenders'>
+          <AllCards genders={this.state.genders} />
+        </Route>
+    </>
     )
   }
 }
