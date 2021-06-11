@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import Form from '../Form/Form'
+import Card from '../Card/Card'
 import { getWords } from '../../utilities/APICalls'
 
 class App extends Component {
@@ -12,10 +13,27 @@ class App extends Component {
     }
   }
 
+  saveGender = (gender, id) => {
+    const newGender = { gender: gender, id: id }
+    if (this.state.genders.find(gender => gender.id === newGender.id)) {
+        return
+    } else {
+      this.setState({ genders: [...this.state.genders, newGender]})
+    }
+  }
+
+  delGender = (id) => {
+    const removeGender = this.state.genders.filter(gender => {
+      return gender.id !== id
+    })
+    this.setState({ genders: removeGender })
+  }
+
   updateGender = (vibe, entity) => {
     const oneVibe = this.getAWord(vibe)
     const oneEntity = this.getAWord(entity)
-    this.setState({ currentGender: `${oneVibe} ${oneEntity}`})
+    const id = Date.now()
+    this.setState({ currentGender: { gender:`${oneVibe} ${oneEntity}`, id: id }})
   }
 
   getAWord = (category) => {
@@ -35,6 +53,11 @@ class App extends Component {
 
   getRandomIndex = (min, max) => {
      return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+
+  createID = () => {
+    const id = Date.now()
+    return id
   }
 
   componentDidMount = async () => {
@@ -60,9 +83,12 @@ class App extends Component {
       <>
         <h1>The Random Gender-ator</h1>
         <Form updateGender={this.updateGender}/>
-        {this.state.currentGender &&
-          <h2>{this.state.currentGender}</h2>
-        }
+        <Card
+          currentGender={this.state.currentGender}
+          id={this.state.currentGender}
+          saveGender={this.saveGender}
+          delGender={this.delGender}
+        />
       </>
     )
   }
