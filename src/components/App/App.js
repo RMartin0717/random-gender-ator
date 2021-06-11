@@ -70,7 +70,10 @@ class App extends Component {
   }
 
   componentDidMount = async () => {
-
+    if (JSON.parse(localStorage.getItem('genders'))) {
+      const storedGenders = JSON.parse(localStorage.getItem('genders'))
+      this.setState({ genders: storedGenders })
+    }
     try {
       const fetchedAnimals = await getWords('animal');
       this.setState({ animal: fetchedAnimals.associations_array })
