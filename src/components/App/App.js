@@ -4,7 +4,8 @@ import Header from '../Header/Header'
 import Form from '../Form/Form'
 import Card from '../Card/Card'
 import AllCards from '../AllCards/AllCards'
-import { Route } from 'react-router-dom'
+import Error from '../Error/Error'
+import { Route, Switch } from 'react-router-dom'
 import { getWords } from '../../utilities/APICalls'
 
 class App extends Component {
@@ -95,6 +96,7 @@ class App extends Component {
     return (
       <>
         <Header />
+        <Switch>
         <Route
           exact path='/'
           render={() => {
@@ -119,6 +121,10 @@ class App extends Component {
             delGender={this.delGender}
           />
         </Route>
+        <Route>
+         <Error error={`Page not found. Click 'Home' to return to the main page.`} />
+       </Route>
+      </Switch>
     </>
     )
   }
