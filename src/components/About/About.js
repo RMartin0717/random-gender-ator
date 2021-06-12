@@ -3,6 +3,7 @@ import './About.css'
 const About = () => {
   return (
     <div className='about-page'>
+      <h3 className='content'>About</h3>
       <h3>Want some ideas for how you might use this app?</h3>
       <p className='focus-q about-p'>How do you reconcile the fact that gender as a construct is fake with the fact that your gender is valid? Play and find out.</p>
       <p className='about-p'>There are several ways to approach The Random Gender-ator.</p>

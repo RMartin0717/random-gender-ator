@@ -30,6 +30,7 @@ class Form extends Component {
     return (
       <>
         <form>
+          <h3 className='content'>Home</h3>
           <h3 className='title content'>Select a vibe and an entity to create your own new gender!</h3>
           <label htmlFor='vibe-select'>Choose a vibe:</label>
           <select name='vibe' id='vibe-select' onChange={e => this.handleChange(e)} className='vibe-select content'>
