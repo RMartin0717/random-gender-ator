@@ -109,7 +109,6 @@ class App extends Component {
             render={() => {
               return (
                 <>
-                  <h3>Home</h3>
                   <Form updateGender={this.updateGender} />
                   <Card
                     gender={this.state.currentGender}
