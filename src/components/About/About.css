@@ -1,1 +1,19 @@
+.about-page {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 
+.about-p {
+  margin: 2vw;
+}
+
+.focus-q {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.ways-to-play {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
