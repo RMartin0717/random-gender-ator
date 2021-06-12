@@ -36,13 +36,17 @@ class App extends Component {
   }
 
   updateGender = (vibe, entity) => {
+    const { animal, extraterrestrial, trash, sparkle} = this.state
     if (!vibe || !entity) {
       return
+    } else if (!animal || !extraterrestrial || !trash || !sparkle) {
+      this.setState({ error: "No word associations found. Come back later for more fresh-baked genders."})
+    } else {
+      const oneVibe = this.getAWord(vibe)
+      const oneEntity = this.getAWord(entity)
+      const id = Date.now()
+      this.setState({ currentGender: { gender:`${oneVibe} ${oneEntity}`, id: id }})
     }
-    const oneVibe = this.getAWord(vibe)
-    const oneEntity = this.getAWord(entity)
-    const id = Date.now()
-    this.setState({ currentGender: { gender:`${oneVibe} ${oneEntity}`, id: id }})
   }
 
   getAWord = (category) => {
@@ -112,6 +116,9 @@ class App extends Component {
                     saveGender={this.saveGender}
                     delGender={this.delGender}
                   />
+                  {this.state.error &&
+                    <Error error={this.state.error} />
+                  }
                 </>
               )
             }}
