@@ -36,13 +36,17 @@ class App extends Component {
   }
 
   updateGender = (vibe, entity) => {
+    const { animal, extraterrestrial, trash, sparkle} = this.state
     if (!vibe || !entity) {
       return
+    } else if (!animal || !extraterrestrial || !trash || !sparkle) {
+      this.setState({ error: "No word associations found. Come back later for more fresh-baked genders."})
+    } else {
+      const oneVibe = this.getAWord(vibe)
+      const oneEntity = this.getAWord(entity)
+      const id = Date.now()
+      this.setState({ currentGender: { gender:`${oneVibe} ${oneEntity}`, id: id }})
     }
-    const oneVibe = this.getAWord(vibe)
-    const oneEntity = this.getAWord(entity)
-    const id = Date.now()
-    this.setState({ currentGender: { gender:`${oneVibe} ${oneEntity}`, id: id }})
   }
 
   getAWord = (category) => {
@@ -54,10 +58,12 @@ class App extends Component {
       const secondWord = this.state[subCategories[1]][this.getRandomIndex(0, this.state[subCategories[1]].length - 1)]
 
       return `${firstWord}-${secondWord}`
-    } else {
+    } else if (this.state[category]) {
       const word = this.state[category][this.getRandomIndex(0, this.state[category].length - 1)]
 
       return word
+    } else {
+      this.setState({ error: "No word associations found. Come back later for more fresh-baked genders."})
     }
   }
 
@@ -103,13 +109,16 @@ class App extends Component {
               return (
                 <>
                   <h3>Home</h3>
-                  <Form updateGender={this.updateGender}/>
+                  <Form updateGender={this.updateGender} />
                   <Card
                     gender={this.state.currentGender}
                     id={this.state.currentGender}
                     saveGender={this.saveGender}
                     delGender={this.delGender}
                   />
+                  {this.state.error &&
+                    <Error error={this.state.error} />
+                  }
                 </>
               )
             }}

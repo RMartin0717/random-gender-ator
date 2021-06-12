@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Error from '../Error/Error'
 import './Form.css'
 
 class Form extends Component {
@@ -16,7 +17,13 @@ class Form extends Component {
 
   handleClick = (event) => {
     event.preventDefault()
-    this.props.updateGender(this.state.vibe, this.state.entity)
+    const { vibe, entity } = this.state
+    if (vibe && entity) {
+      this.props.updateGender(this.state.vibe, this.state.entity)
+      this.setState({ error: null })
+    } else {
+      this.setState({ error: "Please select both a vibe and an entity"})
+    }
   }
 
   render() {
@@ -39,6 +46,9 @@ class Form extends Component {
           </select>
           <button onClick={(event) => this.handleClick(event)}>New Gender Please</button>
         </form>
+        {this.state.error &&
+          <Error error={this.state.error} />
+        }
       </>
     )
   }
