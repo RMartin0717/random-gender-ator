@@ -1,5 +1,5 @@
 export const getWords = async (word) => {
-  const response = await fetch(`https://twinword-word-associations-v1.p.rapidapi.com/associations/?entry=${word}`, {
+  const response = await fetch(`https://twinword-word-associations-v1.p.rapidapi.com/associations/?entr=${word}`, {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-key": "2f02989ae5msh427de8f8ba15f4ep120743jsn069d9b1838e3",
@@ -14,6 +14,7 @@ export const getWords = async (word) => {
 export const errorHandler = (response) => {
   if (!response.ok) {
     throw new Error(response.message)
+    console.log("FUCK")
   } else {
     return response.json()
   }
