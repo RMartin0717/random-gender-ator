@@ -4,8 +4,20 @@
   text-align: center;
 }
 
+.ways-to-play {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .about-p {
   margin: 2vw;
+}
+
+.prompt-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2vw;
 }
 
 .focus-q {
@@ -13,7 +25,6 @@
   font-style: italic;
 }
 
-.ways-to-play {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.card-p {
+  margin-bottom: 1vw;
 }
