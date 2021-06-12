@@ -5,6 +5,7 @@ import Form from '../Form/Form'
 import Card from '../Card/Card'
 import AllCards from '../AllCards/AllCards'
 import Error from '../Error/Error'
+import About from '../About/About'
 import { Route, Switch } from 'react-router-dom'
 import { getWords } from '../../utilities/APICalls'
 
@@ -108,7 +109,6 @@ class App extends Component {
             render={() => {
               return (
                 <>
-                  <h3>Home</h3>
                   <Form updateGender={this.updateGender} />
                   <Card
                     gender={this.state.currentGender}
@@ -129,6 +129,9 @@ class App extends Component {
               saveGender={this.saveGender}
               delGender={this.delGender}
             />
+          </Route>
+          <Route path='/about'>
+            <About />
           </Route>
           <Route>
            <Error error={`Page not found. Click 'Home' to return to the main page.`} />

@@ -1,0 +1,14 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 1vw;
+  border-radius: 15px;
+}
+
+.gender-card {
+  margin: 2vw;
+  width: 26vw;
+}
