@@ -20,6 +20,7 @@ class Form extends Component {
     const { vibe, entity } = this.state
     if (vibe && entity) {
       this.props.updateGender(this.state.vibe, this.state.entity)
+      this.setState({ error: null })
     } else {
       this.setState({ error: "Please select both a vibe and an entity"})
     }
