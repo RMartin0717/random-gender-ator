@@ -15,12 +15,12 @@ const AllCards = ({ genders, saveGender, delGender }) => {
     )
   })
   return (
-    <>
-      <h3>Saved Genders</h3>
+    <div className='saved-genders'>
+      <h3 className='content'>Saved Genders</h3>
       <section className='genders-container'>
         {savedGenders}
       </section>
-    </>
+    </div>
   )
 }
 

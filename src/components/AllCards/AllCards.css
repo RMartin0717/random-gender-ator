@@ -1,0 +1,10 @@
+.saved-genders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.genders-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}

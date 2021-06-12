@@ -4,10 +4,3 @@ form {
   align-items: center;
   text-align: center;
 }
-
-.title,
-.vibe-select,
-.entity-select,
-.new-gender-btn {
-  margin-bottom: 2vh;
-}

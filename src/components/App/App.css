@@ -2,3 +2,7 @@
   margin: 0;
   border: 1px solid blue;
 }
+
+.content {
+  margin-bottom: 2vh;
+}
