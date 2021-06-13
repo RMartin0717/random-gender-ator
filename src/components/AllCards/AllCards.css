@@ -7,4 +7,6 @@
 .genders-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid white;
+  border-radius: 15px;
 }

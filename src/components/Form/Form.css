@@ -4,3 +4,10 @@ form {
   align-items: center;
   text-align: center;
 }
+
+.selection-container {
+  margin: 1vw;
+  padding: 1vw;
+  border: 1px solid white;
+  border-radius: 10px;
+}

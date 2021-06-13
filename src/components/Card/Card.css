@@ -5,10 +5,17 @@
   align-items: center;
   text-align: center;
   margin: 1vw;
+  border: 1px solid white;
   border-radius: 15px;
+  max-width: 30vw;
 }
 
 .gender-card {
   margin: 2vw;
   width: 26vw;
+}
+
+.no-gender {
+  width: 30vw;
+  border-radius: 15px;
 }

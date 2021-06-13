@@ -5,7 +5,7 @@ const Card = ({ gender, id, saveGender, delGender }) => {
   return(
     <div className='card-container'>
       {!gender &&
-        <h4>No Gender Yet</h4>
+        <h4 className='no-gender'>No Gender Yet</h4>
       }
       {gender &&
         <div className='gender-card' id={gender.id}>
