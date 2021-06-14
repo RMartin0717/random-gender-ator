@@ -48,21 +48,27 @@ On the home page, the user is able to interact with a gender generator which use
  - The footer of the app contains a link to resources that I complied for trans, nonbinary, and intersex people who live near Denver, Colorado.
 
 Desktop Home Page
+
 <img src="./public/form.gif" width="400">
 
 Desktop About Page
+
 <img src="./public/About.png" width="400">
 
 Desktop Saved Genders Page
+
 <img src="./public/saved.gif" width="400">
 
 Mobile Home Page
+
 <img src="./public/mobile-home.png" width="400">
 
 Mobile About Page
+
 <img src="./public/mobile-about.png" width="400">
 
 Mobile Saved Genders Page
+
 <img src="./public/mobile-saved.png" width="400">
 
 
