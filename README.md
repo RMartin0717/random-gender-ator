@@ -74,15 +74,20 @@ Search Ability
 
 ### Learning Goals
 
-My learning goals for this project were
+My learning goal for this project was to solidify mastery of React, Router, Asynchronous JavaScript, and End to end testing with Cypress.
 
 ### Project Progression
 
+At the beginning of this project, I felt very confident with Cypress testing, relatively confident with Asynchronous Javascript, and wanted to make sure I took the time to gain a deeper understanding with Router.
+
+I planned my project to front-load the functionality of the app, knowing that I would be traveling and working in an unfamiliar place for the second half of the week. On the first day, I spent the morning exploring APIs and testing them to see what would work best for the project. Once I found one that provided the data I wanted, I immediately got to work on building out the React app with fetch calls to get the data and store it to use as I built out functionality. In a matter of a few days, I was able to build out all of the app functionality and then spend the rest of the time end-to-end testing, implementing page design, and managing error handling.
 
 
 ### Reflections
 
- - 
+This project was perfect for solidifying what I learned over the course of this 6-week portion of the Turing front end program. I do feel that I met my learning goals and feel more confident, efficient, and comfortable building a React app from scratch and independently.
+
+I had a lot of fun building this app as the first app that I genuinely feel my friends will enjoy using. Having the framing of "what does this person need from this app?" made it easier to plan and shift gears when necessary and I really enjoyed that aspect of the development. I am particularly excited in the future to develop apps with specific users in mind because it helped me understand the why behind everything I was doing and I felt more invested in the product.
 
 ## Authors
 <table>
