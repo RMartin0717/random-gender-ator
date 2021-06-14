@@ -28,3 +28,9 @@ select {
   border-radius: 10px;
   width: 50vw;
 }
+
+@media screen and (max-width: 770px) {
+  .selection-container {
+    width: 80vw;
+  }
+}

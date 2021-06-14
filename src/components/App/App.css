@@ -23,3 +23,17 @@ button {
   margin-bottom: 2vh;
   border-radius: 15px;
 }
+
+@media screen and (max-width: 480px) {
+  button,
+  p,
+  h3,
+  h4,
+  label {
+    font-size: 1.5em;
+  }
+
+  select {
+    font-size: 1.25em;
+  }
+}

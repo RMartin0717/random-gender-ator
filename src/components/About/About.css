@@ -36,3 +36,12 @@
 .card-p {
   margin-bottom: 1vw;
 }
+
+@media screen and (max-width: 480px) {
+
+
+  .ways-to-play {
+    display: flex;
+    flex-direction: column;
+  }
+}

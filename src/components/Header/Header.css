@@ -34,3 +34,14 @@
   border: 1px solid white;
   border-radius: 15px;
 }
+
+@media screen and (max-width: 770px) {
+  .header {
+    width: 90vw;
+    font-size: 1em;
+  }
+
+  .page-heading {
+    width: 80vw;
+  }
+}

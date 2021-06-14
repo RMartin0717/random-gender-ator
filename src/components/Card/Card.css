@@ -36,3 +36,19 @@
   width: 30vw;
   border-radius: 15px;
 }
+
+@media screen and (max-width: 480px) {
+  .card-container {
+    max-width: none;
+    width: 80vw;
+    height: 20vh;
+  }
+
+  .card-outline {
+    width: 75vw;
+  }
+
+  .gender-card {
+    width: 70vw;
+  }
+}
