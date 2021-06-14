@@ -4,13 +4,13 @@
 * [Description](#description)
 * [Installation](#installation)
 * [Walkthrough](#walkthrough)
-* [New Learning](#newlearning)
+* [Learning Goals](#learninggoals)
 * [Authors](#authors)
 * [Technologies](#technologies)
 
 ## Description
 
- This project was a final project assigned by [Turing School of Software and Design](www.turing.edu).  I was given one week to
+This project was a final project assigned by [Turing School of Software and Design](www.turing.edu).  I was given one week to
 design and produce an app for a niche audience and given full creative control of the design of the project.   
 
 On the home page, the user is able to interact with a gender generator which uses a word association API to create new genders related to user input. The niche audience for this app is queer people who are looking for new, non-academic words to help verbalize their identity or are tired of explaining gender to family who aren't listening anyway. The app is designed to be both fun and serve as a tool. A more in-depth description of possibles lenses through which to use the app and resources I compiled myself for queer people in Denver lives in the "About" page.
@@ -39,40 +39,29 @@ On the home page, the user is able to interact with a gender generator which use
 
 ## Walkthrough
 
- - When you arrive on the homepage of the app, a fetch request will get and store word associations for "sparkle," "trash," "animal," and "extraterrestrial".  The user will be able to select a vibe from a drop down menu and choose between "sparkle,"  "trash," or "a bit of both". Then the user chooses an entity from a drop down menu from the options, "animal," "extraterrestrial," or "a bit of both." Once both input fields are filled out, the user can click on "New Gender Please" and a gender created from random word associations for each of their selections appears on a card. The user can then choose to save the new gender if they would like. The use can click on "Saved Genders" in the header to view their saved genders and delete any they do not want anymore. They may also click on the "About" Link to view information on ways in which they might choose to use the app for fun, for exploration, or as a coping mechanism. The footer of the app contains a link to resources that I complied for trans, nonbinary, and intersex people who live near Denver, Colorado.
+ When you arrive on the homepage of the app, a fetch request will get and store word associations for "sparkle," "trash," "animal," and "extraterrestrial".  The user will be able to select a vibe from a drop down menu and choose between "sparkle,"  "trash," or "a bit of both". Then the user chooses an entity from a drop down menu from the options, "animal," "extraterrestrial," or "a bit of both." Once both input fields are filled out, the user can click on "New Gender Please" and a gender created from random word associations for each of their selections appears on a card. The user can then choose to save the new gender if they would like. The use can click on "Saved Genders" in the header to view their saved genders and delete any they do not want anymore. They may also click on the "About" Link to view information on ways in which they might choose to use the app for fun, for exploration, or as a coping mechanism. The footer of the app contains a link to resources that I complied for trans, nonbinary, and intersex people who live near Denver, Colorado.
 
-Desktop
+Desktop Home Page
+<img src="./public/form.gif" width="400">
 
-<img src="./public/rancid-home-page.gif" width="400">
+Desktop About Page
+<img src="./public/About.png" width="400">
 
-Tablet
+Desktop Saved Genders Page
+<img src="./public/saved.gif" width="400">
 
-<img src="./public/rancid-tablet-view.gif" width="400">
+Mobile Home Page
+<img src="./public/mobile-home.png" width="400">
 
-Mobile
+Mobile About Page
+<img src="./public/mobile-about.png" width="400">
 
-<img src="./public/rancid-mobile-view.gif" width="400">
-
-MovieInfo - When a card is clicked, the information for that specific movie is displayed with the ability to navigate back to the homepage
-
-<img src="./public/rancid-MovieInfo.gif" width="400">
-
-Router Ability - URL and current MovieInfo displaying are updated together
-
-<img src="./public/rancid-router-ability.gif" width="400">
-
-Search Ability
-
-<img src="./public/rancid-search-movie.gif" width="400">
+Mobile Saved Genders Page
+<img src="./public/mobile-saved.png" width="400">
 
 
-## New Learning
 
-- React fundamentals
-- Router
-- Cypress Acceptance Testing
-
-### Learning Goals
+## Learning Goals
 
 My learning goal for this project was to solidify mastery of React, Router, Asynchronous JavaScript, and End to end testing with Cypress.
 
@@ -83,7 +72,7 @@ At the beginning of this project, I felt very confident with Cypress testing, re
 I planned my project to front-load the functionality of the app, knowing that I would be traveling and working in an unfamiliar place for the second half of the week. On the first day, I spent the morning exploring APIs and testing them to see what would work best for the project. Once I found one that provided the data I wanted, I immediately got to work on building out the React app with fetch calls to get the data and store it to use as I built out functionality. In a matter of a few days, I was able to build out all of the app functionality and then spend the rest of the time end-to-end testing, implementing page design, and managing error handling.
 
 
-### Reflections
+### Reflection
 
 This project was perfect for solidifying what I learned over the course of this 6-week portion of the Turing front end program. I do feel that I met my learning goals and feel more confident, efficient, and comfortable building a React app from scratch and independently.
 
@@ -112,77 +101,3 @@ I had a lot of fun building this app as the first app that I genuinely feel my f
         <td><img src="https://www.pinclipart.com/picdir/middle/175-1759459_eng-a-med-kamel-frameworks-css-css-logo.png" alt="css" width="100" height="auto" /></td>
     </tr>
 </table>
-
-
-
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
