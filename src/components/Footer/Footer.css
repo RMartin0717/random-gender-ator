@@ -10,3 +10,9 @@
   margin: 5vw;
   font-size: .75em;
 }
+
+.github-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
