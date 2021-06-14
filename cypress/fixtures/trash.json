@@ -1,0 +1,8 @@
+{
+  "associations_array": [
+    "incinerator",
+    "landfill",
+    "bin",
+    "disposal"
+  ]
+}

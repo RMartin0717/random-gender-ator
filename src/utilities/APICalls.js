@@ -14,7 +14,6 @@ export const getWords = async (word) => {
 export const errorHandler = (response) => {
   if (!response.ok) {
     throw new Error(response.message)
-    console.log("FUCK")
   } else {
     return response.json()
   }

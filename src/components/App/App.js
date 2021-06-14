@@ -41,7 +41,7 @@ class App extends Component {
     if (!vibe || !entity) {
       return
     } else if (!animal || !extraterrestrial || !trash || !sparkle) {
-      this.setState({ error: "No word associations found. Come back later for more fresh-baked genders."})
+      this.setState({ error: "Some data didn't make it. Try again later."})
     } else {
       const oneVibe = this.getAWord(vibe)
       const oneEntity = this.getAWord(entity)
@@ -95,7 +95,7 @@ class App extends Component {
       const fetchedTrash = await getWords('trash');
       this.setState({ trash: fetchedTrash.associations_array })
     } catch (error) {
-      this.setState({error: "No words found."})
+      this.setState({error: "Failed to fetch words. Try again later."})
     }
   }
 
@@ -119,7 +119,7 @@ class App extends Component {
                   {this.state.error &&
                     <Error error={this.state.error} />
                   }
-                </div> 
+                </div>
               )
             }}
           />
