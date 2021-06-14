@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from '../Card/Card'
 import './AllCards.css'
+import PropTypes from 'prop-types'
 
 const AllCards = ({ genders, saveGender, delGender }) => {
   const savedGenders = genders.map(gender => {
@@ -22,6 +23,12 @@ const AllCards = ({ genders, saveGender, delGender }) => {
       </section>
     </div>
   )
+}
+
+AllCards.propTypes = {
+  genders: PropTypes.arrayOf(PropTypes.string),
+  saveGender: PropTypes.func.isRequired,
+  delGender: PropTypes.func.isRequired
 }
 
 export default AllCards
