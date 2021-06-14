@@ -8,7 +8,7 @@ describe('Form', () => {
       		'x-rapidapi-host': 'twinword-word-associations-v1.p.rapidapi.com'
       	}}).as('animal')
     })
-    cy.fixture('extraterrestrial').then((extraterrestrial) => {
+      .fixture('extraterrestrial').then((extraterrestrial) => {
       cy.intercept('https://twinword-word-associations-v1.p.rapidapi.com/associations/?entry=extraterrestrial', {
         body: extraterrestrial,
         headers: {
@@ -16,7 +16,7 @@ describe('Form', () => {
       		'x-rapidapi-host': 'twinword-word-associations-v1.p.rapidapi.com'
       	}}).as('extraterrestrial')
     })
-    cy.fixture('trash').then((trash) => {
+      .fixture('trash').then((trash) => {
       cy.intercept('https://twinword-word-associations-v1.p.rapidapi.com/associations/?entry=trash', {
         body: trash,
         headers: {
@@ -24,7 +24,7 @@ describe('Form', () => {
       		'x-rapidapi-host': 'twinword-word-associations-v1.p.rapidapi.com'
       	}}).as('trash')
     })
-    cy.fixture('sparkle').then((sparkle) => {
+      .fixture('sparkle').then((sparkle) => {
       cy.intercept('https://twinword-word-associations-v1.p.rapidapi.com/associations/?entry=sparkle', {
         body: sparkle,
         headers: {
@@ -32,9 +32,7 @@ describe('Form', () => {
       		'x-rapidapi-host': 'twinword-word-associations-v1.p.rapidapi.com'
       	}}).as('sparkle')
     })
-    //intercept for all 4 fetch calls
-    //include header info in intercept
-      cy.visit('http://localhost:3000/')
+      .visit('http://localhost:3000/')
   })
   it('Should have a controlled input field for a vibe whose value reflects the data selected in the form', () => {
     cy.get('form select[name="vibe"]').select('trash')
@@ -56,5 +54,7 @@ describe('Form', () => {
         .get('.new-gender-btn').click()
         .get('.error').should('have.text', 'Error: Please select both a vibe and an entity')
     })
+    //test for error message if any category fetch calls failed (app line 44)
+    //test for error message if word associations were not found for a specifc category (app line 67)
   })
 })
