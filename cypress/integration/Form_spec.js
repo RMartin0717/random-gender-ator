@@ -54,7 +54,5 @@ describe('Form', () => {
         .get('.new-gender-btn').click()
         .get('.error').should('have.text', 'Error: Please select both a vibe and an entity')
     })
-    //test for error message if any category fetch calls failed (app line 44)
-    //test for error message if word associations were not found for a specifc category (app line 67)
   })
 })

@@ -95,7 +95,7 @@ class App extends Component {
       const fetchedTrash = await getWords('trash');
       this.setState({ trash: fetchedTrash.associations_array })
     } catch (error) {
-      this.setState({error: "No words found."})
+      this.setState({error: "Failed to fetch words. Try again later."})
     }
   }
 
