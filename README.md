@@ -10,11 +10,10 @@
 
 ## Description
 
- - This project was a final project assigned by [Turing School of Software and Design](www.turing.edu).  I was given one week to
+ This project was a final project assigned by [Turing School of Software and Design](www.turing.edu).  I was given one week to
+design and produce an app for a niche audience and given full creative control of the design of the project.   
 
-...
-
- We were given full creative control of the design of the project.   
+On the home page, the user is able to interact with a gender generator which uses a word association API to create new genders related to user input. The niche audience for this app is queer people who are looking for new, non-academic words to help verbalize their identity or are tired of explaining gender to family who aren't listening anyway. The app is designed to be both fun and serve as a tool. A more in-depth description of possibles lenses through which to use the app and resources I compiled myself for queer people in Denver lives in the "About" page.
 
 ### Notable features
 
@@ -23,6 +22,8 @@
  - Tested with Cypress acceptance testing including the use of stubbed fetch data and happy/sad paths
  - Utilized responsive design for mobile or desktop viewing
  - Utilized a modular file structure for easy file navigation
+ - The ability to create random genders using word association results from a public API
+ - The ability to save favorite genders to local storage and view them on a Saved Genders page
 
 ### Deploy Link
 
@@ -38,7 +39,7 @@
 
 ## Walkthrough
 
- - When you arrive on the homepage of the app, a fetch request will get and display each of the movie posters.  The user will be able to select a movie by clicking on the poster to review its details such as the budget, revenue, brief description, tagline, etc. After reviewing the movie information, the user will have an option to 'Return home' to be redirected back to the homepage, or the user can use the back arrow that is built into their browser to navigate back to the homepage. The user will also be able to search for a movie by its full title or partial title by making use of the search functionality at the top of the landing page.  
+ - When you arrive on the homepage of the app, a fetch request will get and store word associations for "sparkle," "trash," "animal," and "extraterrestrial".  The user will be able to select a vibe from a drop down menu and choose between "sparkle,"  "trash," or "a bit of both". Then the user chooses an entity from a drop down menu from the options, "animal," "extraterrestrial," or "a bit of both." Once both input fields are filled out, the user can click on "New Gender Please" and a gender created from random word associations for each of their selections appears on a card. The user can then choose to save the new gender if they would like. The use can click on "Saved Genders" in the header to view their saved genders and delete any they do not want anymore. They may also click on the "About" Link to view information on ways in which they might choose to use the app for fun, for exploration, or as a coping mechanism. The footer of the app contains a link to resources that I complied for trans, nonbinary, and intersex people who live near Denver, Colorado.
 
 Desktop
 
@@ -81,7 +82,7 @@ My learning goals for this project were
 
 ### Reflections
 
- - Riley: Because we took the time to read up on React, Router, and Cypress before using them in our project, the implementation of each of these new technologies went really smoothly. It was great to take our time with the learning and gain so much from it. It was my first time with acceptance testing and it was fun to shift my thinking about testing to gain a better awareness of the user experience. Eric is very patient, positive, and motivated, making for a really wonderful project and learning experience.
+ - 
 
 ## Authors
 <table>
