@@ -6,6 +6,7 @@ import Card from '../Card/Card'
 import AllCards from '../AllCards/AllCards'
 import Error from '../Error/Error'
 import About from '../About/About'
+import Footer from '../Footer/Footer'
 import { Route, Switch } from 'react-router-dom'
 import { getWords } from '../../utilities/APICalls'
 
@@ -137,6 +138,7 @@ class App extends Component {
            <Error error={`Page not found. Click 'Home' to return to the main page.`} />
          </Route>
       </Switch>
+      <Footer />
     </>
     )
   }
