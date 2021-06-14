@@ -30,7 +30,7 @@ class Form extends Component {
     return (
       <>
         <form>
-          <h3 className='content'>Home</h3>
+          <h2 className='content'>Home</h2>
           <h3 className='title content'>Select a vibe and an entity to create your own new gender!</h3>
           <div className='form-container'>
             <div className='selection-container'>

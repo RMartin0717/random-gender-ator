@@ -1,0 +1,12 @@
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  margin: 2vw;
+}
+
+.resources {
+  margin: 5vw;
+  font-size: .75em;
+}
