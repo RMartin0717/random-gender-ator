@@ -1,7 +1,8 @@
 import React from 'react'
 import './Card.css'
+import PropTypes from 'prop-types'
 
-const Card = ({ gender, id, saveGender, delGender }) => {
+const Card = ({ gender, saveGender, delGender }) => {
   return(
     <div className='card-container'>
       {!gender &&
@@ -20,6 +21,19 @@ const Card = ({ gender, id, saveGender, delGender }) => {
       }
     </div>
   )
+}
+
+Card.propTypes = {
+  gender: PropTypes.shape({
+    gender: PropTypes.string,
+    id: PropTypes.number
+  }),
+  saveGender: PropTypes.func.isRequired,
+  delGender: PropTypes.func.isRequired
+}
+
+Card.defaultProps = {
+  gender: null
 }
 
 export default Card

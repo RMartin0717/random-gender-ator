@@ -25,9 +25,13 @@
 }
 
 .gender-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 1vw;
   width: 23vw;
-  height: 95%;
+  height: 85%;
   border-radius: 15px;
   border: 1px solid white;
 }
@@ -41,7 +45,7 @@
   .card-container {
     max-width: none;
     width: 80vw;
-    height: 23vh;
+    height: 50vw;
   }
 
   .card-outline {

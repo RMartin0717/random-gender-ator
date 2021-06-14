@@ -10,3 +10,15 @@
   margin: 5vw;
   font-size: .75em;
 }
+
+.github-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+  .footer-content {
+    font-size: 1.5em;
+  }
+}

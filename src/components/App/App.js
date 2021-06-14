@@ -113,7 +113,6 @@ class App extends Component {
                   <Form updateGender={this.updateGender} />
                   <Card
                     gender={this.state.currentGender}
-                    id={this.state.currentGender}
                     saveGender={this.saveGender}
                     delGender={this.delGender}
                   />
