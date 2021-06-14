@@ -10,7 +10,7 @@ const Card = ({ gender, id, saveGender, delGender }) => {
       {gender &&
         <div className='card-outline'>
           <div className='gender-card' id={gender.id}>
-            <h4 className='content'>{gender.gender}</h4>
+            <h4 className='new-gender content'>{gender.gender}</h4>
             <div className='content'>
               <button className='save-button' onClick={(event) => saveGender(gender.gender, gender.id)}>Save Gender</button>
               <button className='delete-button' onClick={(event) => delGender(gender.id)}>Delete Gender</button>
