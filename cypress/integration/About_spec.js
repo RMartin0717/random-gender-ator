@@ -1,4 +1,4 @@
-describe('Card', () => {
+describe('About', () => {
   beforeEach(() => {
     cy.fixture('animal').then((animal) => {
       cy.intercept('https://twinword-word-associations-v1.p.rapidapi.com/associations/?entry=animal', {
@@ -33,8 +33,12 @@ describe('Card', () => {
       	}}).as('sparkle')
     })
       .visit('http://localhost:3000/')
+      .get('.about-btn').click()
   })
-  it('Should', () => {
-
+  it('Should display page title, About', () => {
+    cy.get('.about-page > h3').should('include.text', 'About')
+  })
+  it('Should display examples of ways to interact with the page', () => {
+    cy.get('.ways-to-play').should('exist')
   })
 })

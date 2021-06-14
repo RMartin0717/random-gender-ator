@@ -40,6 +40,9 @@ describe('AllCards', () => {
       .get('.saved-btn').click()
   })
   it('Should display page title, Saved Genders', () => {
-
+    cy.get('.saved-genders > h3').should('have.text', 'Saved Genders')
+  })
+  it('Should display saved gender cards', () => {
+    cy.get('.genders-container').should('not.be.empty')
   })
 })
