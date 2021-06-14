@@ -1,4 +1,4 @@
-describe('Card', () => {
+describe('Error', () => {
   beforeEach(() => {
     cy.fixture('animal').then((animal) => {
       cy.intercept('https://twinword-word-associations-v1.p.rapidapi.com/associations/?entry=animal', {

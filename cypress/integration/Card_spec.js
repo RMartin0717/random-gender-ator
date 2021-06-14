@@ -34,7 +34,13 @@ describe('Card', () => {
     })
       .visit('http://localhost:3000/')
   })
-  it('Should', () => {
-    
+  it('Should display a message stating there is no gender yet on page load', () => {
+    .get('.no-gender').should('have.text', 'No Gender Yet')
+  })
+  it('Should display a random new gender when the New Gender Please button is clicked on home page', () => {
+    .get()
+  })
+  it('Should display save and delete buttons when the New Gender Please button is clicked on home page', () => {
+
   })
 })
