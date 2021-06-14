@@ -7,4 +7,14 @@
 .genders-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid white;
+  border-radius: 15px;
+  background: linear-gradient(-45deg, #7800b0, #02d4e3, #f7f302, #d60408);
+}
+
+@media screen and (max-width: 480px) {
+  .genders-container {
+    display: flex;
+    flex-direction: column;
+  }
 }

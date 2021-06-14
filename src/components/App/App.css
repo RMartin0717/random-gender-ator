@@ -1,8 +1,39 @@
 * {
   margin: 0;
-  border: 1px solid blue;
+  background-color: black;
+  color: white;
+}
+
+a {
+  border-radius: 15px;
+}
+
+button {
+  border: 1px solid white;
+  border-radius: 15px;
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .content {
   margin-bottom: 2vh;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 480px) {
+  button,
+  p,
+  h3,
+  h4,
+  label {
+    font-size: 1.5em;
+  }
+
+  select {
+    font-size: 1.25em;
+  }
 }

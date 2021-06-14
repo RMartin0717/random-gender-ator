@@ -108,7 +108,7 @@ class App extends Component {
             exact path='/'
             render={() => {
               return (
-                <>
+                <div className='main-page'>
                   <Form updateGender={this.updateGender} />
                   <Card
                     gender={this.state.currentGender}
@@ -119,7 +119,7 @@ class App extends Component {
                   {this.state.error &&
                     <Error error={this.state.error} />
                   }
-                </>
+                </div> 
               )
             }}
           />
