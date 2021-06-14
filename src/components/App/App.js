@@ -41,7 +41,7 @@ class App extends Component {
     if (!vibe || !entity) {
       return
     } else if (!animal || !extraterrestrial || !trash || !sparkle) {
-      this.setState({ error: "No word associations found. Come back later for more fresh-baked genders."})
+      this.setState({ error: "Some data didn't make it. Try again later."})
     } else {
       const oneVibe = this.getAWord(vibe)
       const oneEntity = this.getAWord(entity)
