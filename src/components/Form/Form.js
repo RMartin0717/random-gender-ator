@@ -32,28 +32,30 @@ class Form extends Component {
         <form>
           <h3 className='content'>Home</h3>
           <h3 className='title content'>Select a vibe and an entity to create your own new gender!</h3>
-          <div className='selection-container'>
-          <label htmlFor='vibe-select'>Choose a vibe:</label>
-            <select name='vibe' id='vibe-select' onChange={e => this.handleChange(e)} className='vibe-select content'>
-              <option value=''>--Please select a vibe--</option>
-              <option value='trash'>Trash</option>
-              <option value='sparkle'>Sparkle</option>
-              <option value='sparkle-trash'>A Bit of Both</option>
-            </select>
+          <div className='form-container'>
+            <div className='selection-container'>
+            <label htmlFor='vibe-select'>Choose a vibe:</label>
+              <select name='vibe' id='vibe-select' onChange={e => this.handleChange(e)} className='vibe-select content'>
+                <option value=''>--Please select a vibe--</option>
+                <option value='trash'>Trash</option>
+                <option value='sparkle'>Sparkle</option>
+                <option value='sparkle-trash'>A Bit of Both</option>
+              </select>
+            </div>
+            <div className='selection-container'>
+              <label htmlFor='entity-select'>Choose an entity:</label>
+              <select name='entity' id='entity-select' onChange={e => this.handleChange(e)} className='entity-select content'>
+                <option value=''>--Please select an entity--</option>
+                <option value='animal'>Animal</option>
+                <option value='extraterrestrial'>Extraterrestrial</option>
+                <option value='animal-extraterrestrial'>A Bit of Both</option>
+              </select>
+            </div>
+            <button onClick={(event) => this.handleClick(event)} className='new-gender-btn content'>New Gender Please</button>
+            {this.state.error &&
+              <Error error={this.state.error} />
+            }
           </div>
-          <div className='selection-container'>
-            <label htmlFor='entity-select'>Choose an entity:</label>
-            <select name='entity' id='entity-select' onChange={e => this.handleChange(e)} className='entity-select content'>
-              <option value=''>--Please select an entity--</option>
-              <option value='animal'>Animal</option>
-              <option value='extraterrestrial'>Extraterrestrial</option>
-              <option value='animal-extraterrestrial'>A Bit of Both</option>
-            </select>
-          </div>
-          <button onClick={(event) => this.handleClick(event)} className='new-gender-btn content'>New Gender Please</button>
-          {this.state.error &&
-            <Error error={this.state.error} />
-          }
         </form>
       </>
     )

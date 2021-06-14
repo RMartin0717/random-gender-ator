@@ -1,0 +1,8 @@
+h4 {
+  border-radius: 15px;
+}
+.error {
+  padding: 1vw;
+  border-radius: 15px;
+  border: 1px solid white;
+}

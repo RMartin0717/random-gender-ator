@@ -4,8 +4,11 @@
   color: white;
 }
 
+a {
+  border-radius: 15px;
+}
+
 button {
-  margin: .5vw;
   border: 1px solid white;
   border-radius: 15px;
 }
@@ -14,9 +17,9 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .content {
   margin-bottom: 2vh;
+  border-radius: 15px;
 }
