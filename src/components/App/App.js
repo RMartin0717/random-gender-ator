@@ -119,7 +119,7 @@ class App extends Component {
                   {this.state.error &&
                     <Error error={this.state.error} />
                   }
-                </div> 
+                </div>
               )
             }}
           />
