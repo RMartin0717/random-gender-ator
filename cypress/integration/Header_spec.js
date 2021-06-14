@@ -1,4 +1,4 @@
-describe('Header', => {
+describe('Header', () => {
   beforeEach(() => {
     cy.fixture('animal').then((animal) => {
       cy.intercept('https://twinword-word-associations-v1.p.rapidapi.com/associations/?entry=animal', { body: animal }).as('animal')
@@ -18,7 +18,7 @@ describe('Header', => {
       .url().should('include', '/')
   })
   it('Should go to the about page whent the about button is clicked', () => {
-    cy.get('.add-tree').click()
+    cy.get('.about-btn').click()
       .url().should('include', '/about')
   })
   it('Should go to the saved genders page when the saved genders button is clicked', () => {
