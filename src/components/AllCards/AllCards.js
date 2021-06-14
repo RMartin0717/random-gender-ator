@@ -18,6 +18,9 @@ const AllCards = ({ genders, saveGender, delGender }) => {
   return (
     <div className='saved-genders'>
       <h2 className='content'>Saved Genders</h2>
+      {!savedGenders.length &&
+        <h4>No Genders Saved Yet!</h4>
+      }
       <section className='genders-container'>
         {savedGenders}
       </section>
