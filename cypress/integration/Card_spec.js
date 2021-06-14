@@ -38,9 +38,24 @@ describe('Card', () => {
     .get('.no-gender').should('have.text', 'No Gender Yet')
   })
   it('Should display a random new gender when the New Gender Please button is clicked on home page', () => {
-    .get()
+    cy.get('form select[name="vibe"]').select('sparkle')
+      .get('form select[name="entity"]').select('extraterrestrial')
+      .get('.new-gender-btn').click()
+      .get('.new-gender').should('have.text', 'twinkle spaceship')
   })
   it('Should display save and delete buttons when the New Gender Please button is clicked on home page', () => {
-
+    cy.get('form select[name="vibe"]').select('sparkle')
+      .get('form select[name="entity"]').select('extraterrestrial')
+      .get('.new-gender-btn').click()
+      .get('.save-button').should('exist')
+      .get('.delete-button').should('exist')
+  })
+  it('Should save the current card when the save button is clicked. Should be visible on Saved Genders page', () => {
+    cy.get('form select[name="vibe"]').select('sparkle')
+      .get('form select[name="entity"]').select('extraterrestrial')
+      .get('.new-gender-btn').click()
+      .get('.save-button').click()
+      .get('.saved-btn').click()
+      .get('.new-gender').should('have.text', 'twinkle spaceship')
   })
 })
