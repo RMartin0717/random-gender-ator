@@ -29,7 +29,10 @@ const AllCards = ({ genders, saveGender, delGender }) => {
 }
 
 AllCards.propTypes = {
-  genders: PropTypes.arrayOf(PropTypes.string),
+  genders: PropTypes.arrayOf(PropTypes.shape({
+    gender: PropTypes.string,
+    id: PropTypes.number
+  })),
   saveGender: PropTypes.func.isRequired,
   delGender: PropTypes.func.isRequired
 }
