@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Error from '../Error/Error'
 import './Form.css'
+import PropTypes from 'prop-types'
 
 class Form extends Component {
   constructor(props) {
@@ -60,6 +61,10 @@ class Form extends Component {
       </>
     )
   }
+}
+
+Form.propTypes = {
+  updateGender: PropTypes.func.isRequired
 }
 
 export default Form
