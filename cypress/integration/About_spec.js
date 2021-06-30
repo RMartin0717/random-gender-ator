@@ -36,7 +36,7 @@ describe('About', () => {
       .get('.about-btn').click()
   })
   it('Should display page title, About', () => {
-    cy.get('.about-page > h3').should('include.text', 'About')
+    cy.get('.about-page > h2').should('include.text', 'About')
   })
   it('Should display examples of ways to interact with the page', () => {
     cy.get('.ways-to-play').should('exist')
