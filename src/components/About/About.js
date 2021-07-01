@@ -19,7 +19,7 @@ const About = () => {
         </div>
         <div className='prompt-card about-p'>
           <p className='card-p'>Maybe for you, the Gender-ator is an escape from the gatekeeping that exists even in queer spaces.</p>
-          <p className='card-p'>Why do none of us ever feel "queer enough"? Now I'm a "light-disposable spaceship."</p>
+          <p className='card-p'>Why do none of us ever feel "queer enough"? Now I'm a "light-disposable spaceship." You don't get to define what's "light-disposable spaceship" enough.</p>
           <p>Try to stop me.</p>
         </div>
         <div className='prompt-card about-p'>
