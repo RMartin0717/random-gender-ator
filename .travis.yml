@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- node
+notifications:
+  email: false
+deploy:
+  api_key:
+    provider: heroku
+    secure: ieOJWrmwai5U6SFCC08K2x8uCzgLvxTVNPLBmNArfesd2nxbup+qD3NamAqPRiZp9Zr4rUVzp7BVLp7iFhsM15qeJDGoJFxEWcvSbXd57mMVtJbsN7NC+tz4ThlS2PqiBz7NgbzBULhXalRXBXR00/of8OjRHnnJNreXlvJYCFHectl4/D8k+xUMMkQxZi7XB5pISgUz5zFf27awA7kW6fzTKlh7jI0q/TIwe31EmvF7qzfFSwkdAefAh8xxVaSs8ag9HjuSyOXp4Qv5JLJmwV02owzTGnMC4o/BZqZqBPpbSjk82NxltGcz4NxTKZr2JZ3UiCO4d5gr25ANOqnGA6OYtqtU4T6oyTl+fO1AS8Yrtu9ks0bwWyjm11HQWFYy0orKiWx/kAbbqz1uVBothkWA/Lt5r/TLwGMDGukAjFO76HEmCJr96e0oc9cqXc8nH0HINWEtVondQBw2PISvEifuASOA9RSWl4UxoBTeGwrjAwnOsIlvegRforqhB+dp1+HVxnGNu4O045O4KCbfyH9Ni2jVYahTC5HCcof9SgNnB2/lO84I3zRJsEkOQqmR79ytX1/Q9YuZ6Of5MfojTe0FDiIOekZW96VttalaEh6tM8TDcjwRt3v17CONjNLYzDs9SuADsLxJ5CXx7EM6EZX9WayJCN/VOQKlPjKewfM=
+    app: the-random-gender-ator
+    skip_cleanup: true
