@@ -4,6 +4,7 @@
 * [Description](#description)
 * [Installation](#installation)
 * [Walkthrough](#walkthrough)
+* [In Progress](#inprogress)
 * [Learning Goals](#learninggoals)
 * [Authors](#authors)
 * [Technologies](#technologies)
@@ -71,7 +72,13 @@ Mobile Saved Genders Page
 
 <img src="./public/mobile-saved.png" width="400">
 
+## In Progress
 
+There are currently a couple of minor issues to address with the app. I am currently learning to set up automatic deployment with heroku and then will resolve these issues. 
+
+Currently, "foreigner" is coming from the 3rd party API for word associations for "extraterrestrial" and I would like to filter this out.
+The title image needs to be updated so that it is a rainbow icon instead of the React logo.
+There is a sentence in the About page that is repeated and one needs to be removed.
 
 ## Learning Goals
 
