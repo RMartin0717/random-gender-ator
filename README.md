@@ -63,27 +63,27 @@ There is a sentence in the About page that is repeated and one needs to be remov
 
 #### Desktop Home Page
 
-<img src="./public/form.gif" height="400">
+<img src="./public/form.gif" width="400">
 
 #### Desktop About Page
 
-<img src="./public/About.png" height="400">
+<img src="./public/About.png" width="400">
 
 #### Desktop Saved Genders Page
 
-<img src="./public/saved.gif" height="400">
+<img src="./public/saved.gif" width="400">
 
 #### Mobile Home Page
 
-<img src="./public/mobile-home.png" height="400">
+<img src="./public/mobile-home.png" width="400">
 
 #### Mobile About Page
 
-<img src="./public/mobile-about.png" height="400">
+<img src="./public/mobile-about.png" width="400">
 
 #### Mobile Saved Genders Page
 
-<img src="./public/mobile-saved.png" height="400">
+<img src="./public/mobile-saved.png" width="400">
 
 ## Early Learning
 
