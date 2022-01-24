@@ -4,7 +4,7 @@
 * [Description](#description)
 * [Installation](#installation)
 * [Walkthrough](#walkthrough)
-* [In Progress](#in progress)
+* [In Progress](#in-progress)
 * [Learning Goals](#learninggoals)
 * [Authors](#authors)
 * [Technologies](#technologies)
