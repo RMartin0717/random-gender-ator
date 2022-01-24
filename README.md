@@ -1,22 +1,19 @@
 # The Random Gender-ator
 
 ## Table of Contents
-* [Deploy Link](#deploy-link)
-* [Description](#description)
+* [Overview](#overview)
 * [In Progress](#in-progress)
-* [Notable Features](#notable-features)
-* [Installation](#installation)
-* [Walkthrough](#walkthrough)
-* [Learning Goals](#learning-goals)
-* [Project Progression](#project-progression)
-* [Reflection](#reflection)
+* [Deep Dive](#deep-dive)
+* [Early Learning](#early-learning)
 * [Authors](#authors)
 * [Technologies](#technologies)
 
-## Deploy Link
+## Overview
+
+### Deploy Link
 https://the-random-gender-ator.herokuapp.com/
 
-## Description
+### Description
 
 This project was a final project assigned by [Turing School of Software and Design](www.turing.edu). I was given one week to design and produce an app for a niche audience and given full creative control of the design of the project. The app is built with React, React Router, tested with Cypress, and utilizes Travis CI.
 
@@ -24,15 +21,20 @@ On the home page, the user is able to interact with a gender generator which use
 
 ## In Progress
 
+### Backend API
+
 I am currently working on my own backend API using Express with Knex to replace the 3rd party API presently in use by the app. Details and progress can be seen in [this repo](https://github.com/RMartin0717/random-gender-ator-api/blob/main/README.md)
 
+### Automatic Deployment for Patch Work
 There are a couple of minor issues to address with the app. I am currently learning to set up automatic deployment with heroku and then will resolve these issues. 
 
 Currently, "foreigner" is coming from the 3rd party API for word associations for "extraterrestrial" and I would like to filter this out.
 The title image needs to be updated so that it is a rainbow icon instead of the React logo.
 There is a sentence in the About page that is repeated and one needs to be removed.
 
-## Notable features
+## Deep Dive 
+
+### Notable features
 
  - Use of Router to enable user to navigate to multiple pages and to navigate using back and forward browser controls.
  - Tested with Cypress acceptance testing including the use of stubbed fetch data and happy/sad paths
@@ -41,14 +43,14 @@ There is a sentence in the About page that is repeated and one needs to be remov
  - The ability to create random genders using word association results from a public API
  - The ability to save favorite genders to local storage and view them on a Saved Genders page
 
-## Installation
+### Installation
 1. Clone down this [repo](https://github.com/RMartin0717/random-gender-ator)
 2. CD into project directory
 3. Run npm i to install all project dependencies
 4. Run npm start to begin the server
 5. Application should be shown in separate window once npm start is complete
 
-## Walkthrough
+### Walkthrough
 
  - When you arrive on the homepage of the app, a fetch request will get and store word associations for "sparkle," "trash," "animal," and "extraterrestrial".  
  - The user will be able to select a vibe from a drop down menu and choose between "sparkle,"  "trash," or "a bit of both".
@@ -83,17 +85,19 @@ Mobile Saved Genders Page
 
 <img src="./public/mobile-saved.png" width="400">
 
-## Learning Goals
+## Early Learning
+
+### Learning Goals
 
 My learning goal for this project was to solidify mastery of React, Router, Asynchronous JavaScript, and End to end testing with Cypress.
 
-## Project Progression
+### Project Progression
 
 At the beginning of this project, I felt very confident with Cypress testing, relatively confident with Asynchronous Javascript, and wanted to make sure I took the time to gain a deeper understanding with Router.
 
 I planned my project to front-load the functionality of the app, knowing that I would be traveling and working in an unfamiliar place for the second half of the week. On the first day, I spent the morning exploring APIs and testing them to see what would work best for the project. Once I found one that provided the data I wanted, I immediately got to work on building out the React app with fetch calls to get the data and store it to use as I built out functionality. In a matter of a few days, I was able to build out all of the app functionality and then spend the rest of the time end-to-end testing, implementing page design, and managing error handling.
 
-## Reflection
+### Reflection
 
 This project was perfect for solidifying what I learned over the course of this 6-week portion of the Turing front end program. I do feel that I met my learning goals and feel more confident, efficient, and comfortable building a React app from scratch and independently.
 
