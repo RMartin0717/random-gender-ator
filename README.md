@@ -123,6 +123,6 @@ I had a lot of fun building this app as the first app that I genuinely feel my f
         <td><img src="https://raw.githubusercontent.com/voodootikigod/logo.js/master/js.png" alt="javascript" width="100" height="auto" /></td>
         <td><img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png" alt="html" width="100" height="auto" /></td>
         <td><img src="https://www.pinclipart.com/picdir/middle/175-1759459_eng-a-med-kamel-frameworks-css-css-logo.png" alt="css" width="100" height="auto" /></td>
-        <td><img src="https://travis-ci.com/images/logos/TravisCI-Mascot-pride.png" alt="css" width="100" height="auto" /></td>
+        <td><img src="https://travis-ci.com/images/logos/TravisCI-Mascot-pride.png" alt="travis ci" width="100" height="auto" /></td>
     </tr>
 </table>
