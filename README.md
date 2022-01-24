@@ -74,7 +74,9 @@ Mobile Saved Genders Page
 
 ## In Progress
 
-There are currently a couple of minor issues to address with the app. I am currently learning to set up automatic deployment with heroku and then will resolve these issues. 
+I am currently working on my own backend API using Express with Knex to replace the 3rd party API presently in use by the app. Details and progress can be seen in ![this repo](https://github.com/RMartin0717/random-gender-ator-api/blob/main/README.md)
+
+There are a couple of minor issues to address with the app. I am currently learning to set up automatic deployment with heroku and then will resolve these issues. 
 
 Currently, "foreigner" is coming from the 3rd party API for word associations for "extraterrestrial" and I would like to filter this out.
 The title image needs to be updated so that it is a rainbow icon instead of the React logo.
