@@ -7,7 +7,7 @@
 * [Notable Features](#notable-features)
 * [Installation](#installation)
 * [Walkthrough](#walkthrough)
-* [Learning Goals](#learninggoals)
+* [Learning Goals](#learning-goals)
 * [Project Progression](#project-progression)
 * [Reflection](#reflection)
 * [Authors](#authors)
