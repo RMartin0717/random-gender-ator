@@ -61,27 +61,27 @@ There is a sentence in the About page that is repeated and one needs to be remov
  - They may also click on the "About" Link to view information on ways in which they might choose to use the app for fun, for exploration, or as a coping mechanism.
  - The footer of the app contains a link to resources that I complied for trans, nonbinary, and intersex people who live near Denver, Colorado.
 
-Desktop Home Page
+#### Desktop Home Page
 
 <img src="./public/form.gif" width="400">
 
-Desktop About Page
+#### Desktop About Page
 
 <img src="./public/About.png" width="400">
 
-Desktop Saved Genders Page
+#### Desktop Saved Genders Page
 
 <img src="./public/saved.gif" width="400">
 
-Mobile Home Page
+#### Mobile Home Page
 
 <img src="./public/mobile-home.png" width="400">
 
-Mobile About Page
+#### Mobile About Page
 
 <img src="./public/mobile-about.png" width="400">
 
-Mobile Saved Genders Page
+#### Mobile Saved Genders Page
 
 <img src="./public/mobile-saved.png" width="400">
 
