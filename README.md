@@ -42,6 +42,7 @@ There is a sentence in the About page that is repeated and one needs to be remov
  - Utilized a modular file structure for easy file navigation
  - The ability to create random genders using word association results from a public API
  - The ability to save favorite genders to local storage and view them on a Saved Genders page
+ - 100% Lighthouse accessibility audit
 
 ### Installation
 1. Clone down this [repo](https://github.com/RMartin0717/random-gender-ator)
