@@ -17,7 +17,8 @@ describe('App Error Handling', () => {
     })
       .fixture('sparkle').then((sparkle) => {
       cy.intercept('https://the-random-gender-ator-api.herokuapp.com/api/v1/sparkles', {
-        body: sparkle
+        body: sparkle,
+        statusCode:404,
       }).as('sparkle')
     })
   })

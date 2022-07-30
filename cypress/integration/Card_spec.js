@@ -30,7 +30,7 @@ describe('Card', () => {
     cy.get('form select[name="vibe"]').select('sparkle')
       .get('form select[name="entity"]').select('extraterrestrial')
       .get('.new-gender-btn').click()
-      .get('.new-gender').should('have.text', 'twinkle spaceship')
+      .get('.new-gender').should('have.text', 'glitter spaceship')
   })
   it('Should display save and delete buttons when the New Gender Please button is clicked on home page', () => {
     cy.get('form select[name="vibe"]').select('sparkle')

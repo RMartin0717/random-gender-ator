@@ -21,13 +21,11 @@ describe('AllCards', () => {
       }).as('sparkle')
     })
     .visit('http://localhost:3000/')
-    .wait(['@animal', '@extraterrestrial', '@trash', '@sparkle']).then(
-      cy.get('form select[name="vibe"]').select('sparkle')
-        .get('form select[name="entity"]').select('extraterrestrial')
-        .get('.new-gender-btn').click()
-        .get('.save-button').click()
-        .get('.saved-btn').click()
-    )
+    .get('form select[name="vibe"]').select('sparkle')
+    .get('form select[name="entity"]').select('extraterrestrial')
+    .get('.new-gender-btn').click()
+    .get('.save-button').click()
+    .get('.saved-btn').click()
   })
 
   it('Should display page title, Saved Genders', () => {
