@@ -84,17 +84,21 @@ class App extends Component {
       this.setState({ genders: storedGenders })
     }
     try {
-      const fetchedAnimals = await getWords('animal');
-      this.setState({ animal: fetchedAnimals.associations_array })
+      const fetchedAnimals = await getWords('animals');
+      const cleanedAnimals = fetchedAnimals.map(animal => animal.word_association)
+      this.setState({ animal: cleanedAnimals })
 
-      const fetchedAliens = await getWords('extraterrestrial');
-      this.setState({ extraterrestrial: fetchedAliens.associations_array })
+      const fetchedExtraterrestrials = await getWords('extraterrestrials');
+      const cleanedExtraterrestrials = fetchedExtraterrestrials.map(extraterrestrial => extraterrestrial.word_association)
+      this.setState({ extraterrestrial: cleanedExtraterrestrials })
 
-      const fetchedSparkles = await getWords('sparkle');
-      this.setState({ sparkle: fetchedSparkles.associations_array })
+      const fetchedSparkles = await getWords('sparkles');
+      const cleanedSparkles = fetchedSparkles.map(sparkle => sparkle.word_association)
+      this.setState({ sparkle: cleanedSparkles })
 
-      const fetchedTrash = await getWords('trash');
-      this.setState({ trash: fetchedTrash.associations_array })
+      const fetchedTrashes = await getWords('trashes');
+      const cleanedTrashes = fetchedTrashes.map(trash => trash.word_association)
+      this.setState({ trash: cleanedTrashes })
     } catch (error) {
       this.setState({error: "Failed to fetch words. Try again later."})
     }
