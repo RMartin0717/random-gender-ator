@@ -20,17 +20,17 @@ describe('App Error Handling', () => {
         body: sparkle
       }).as('sparkle')
     })
-    
-    it('Should display an error message if any of the selected category arrays do not contain any word associations', () => {
-        cy.visit('http://localhost:3000/')
-        .get('form select[name="vibe"]').select('sparkle')
-        .get('form select[name="entity"]').select('extraterrestrial')
-        .get('.new-gender-btn').click()
-        .get('.error').should('have.text', 'Error: Some data didn\'t make it. Try again later.')
-    })
-    it('Should display a 404 error message if the user navigates to a path that doesn\'t exist', () => {
-        cy.visit('http://localhost:3000/lkajsdfl')
-          .get('.error').should('have.text', 'Error: Page not found. Click \'Home\' to return to the main page.')
-    })
+  })
+
+  it('Should display an error message if any of the selected category arrays do not contain any word associations', () => {
+      cy.visit('http://localhost:3000/')
+      .get('form select[name="vibe"]').select('sparkle')
+      .get('form select[name="entity"]').select('extraterrestrial')
+      .get('.new-gender-btn').click()
+      .get('.error').should('have.text', 'Error: Some data didn\'t make it. Try again later.')
+  })
+  it('Should display a 404 error message if the user navigates to a path that doesn\'t exist', () => {
+      cy.visit('http://localhost:3000/lkajsdfl')
+        .get('.error').should('have.text', 'Error: Page not found. Click \'Home\' to return to the main page.')
   })
 })
