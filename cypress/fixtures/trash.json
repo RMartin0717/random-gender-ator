@@ -1,8 +1,8 @@
-{
-  "associations_array": [
-    "incinerator",
-    "landfill",
-    "bin",
-    "disposal"
-  ]
-}
+[
+  {
+    "id": 1,
+    "word_association": "fire",
+    "created_at": "2022-07-30T20:13:57.474Z",
+    "updated_at": "2022-07-30T20:13:57.474Z"
+  }
+]
