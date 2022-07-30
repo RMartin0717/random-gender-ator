@@ -17,24 +17,19 @@ https://the-random-gender-ator.herokuapp.com/
 
 This project was a final project assigned by [Turing School of Software and Design](www.turing.edu). I was given one week to design and produce an app for a niche audience and given full creative control of the design of the project. The app is built with React, React Router, tested with Cypress, and utilizes Travis CI.
 
-On the home page, the user is able to interact with a gender generator which uses a public 3rd party word association API to create new genders related to user input. The niche audience for this app is queer people who are looking for new, non-academic words to help verbalize their identity or are tired of explaining gender to family who aren't listening anyway. The app is designed to be both fun and serve as a tool. A more in-depth description of possibles lenses through which to use the app lives in the "About" page and resources I compiled myself for queer people in Denver are linked in the footer of each page.
+On the home page, the user is able to interact with a gender generator which uses a [word association API](https://github.com/RMartin0717/random-gender-ator-api) that I built using Node.js with Express, Knex, and Postgres to create new genders related to user input. The niche audience for this app is queer people who are looking for new, non-academic words to help verbalize their identity or are tired of explaining gender to family who aren't listening anyway. The app is designed to be both fun and serve as a tool. A more in-depth description of possibles lenses through which to use the app lives in the "About" page and resources I compiled myself for queer people in Denver are linked in the footer of each page.
 
 ## In Progress
 
-### Backend API
-
-I am currently working on my own backend API using Express with Knex to replace the 3rd party API presently in use by the app. Details and progress can be seen in [this repo](https://github.com/RMartin0717/random-gender-ator-api/blob/main/README.md)
-
 ### Automatic Deployment for Patch Work
-There are a couple of minor issues to address with the app. I am currently learning to set up automatic deployment with heroku and then will resolve these issues. 
+There are a couple of minor issues to address with the app. I am currently learning to set up automatic deployment with heroku and then will resolve these issues.
 
-- Currently, "foreigner" is coming from the 3rd party API for word associations for "extraterrestrial" and I would like to filter this out.
 - The title image needs to be updated so that it is a rainbow icon instead of the React logo.
 - There is a sentence in the About page that is repeated and one needs to be removed.
 - Intend to add aria attributes to HTML.
 - Would like to update with newest versions of React and React Router.
 
-## Deep Dive 
+## Deep Dive
 
 ### Notable features
 
@@ -96,13 +91,13 @@ My learning goal for this project was to solidify mastery of React, Router, Asyn
 
 ### Project Progression
 
-At the beginning of this project, I felt very confident with Cypress testing, relatively confident with Asynchronous Javascript, and wanted to make sure I took the time to gain a deeper understanding with Router.
+At the beginning of the front end portion project, I felt very confident with Cypress testing, relatively confident with Asynchronous Javascript, and wanted to make sure I took the time to gain a deeper understanding with Router.
 
-I planned my project to front-load the functionality of the app, knowing that I would be traveling and working in an unfamiliar place for the second half of the week. On the first day, I spent the morning exploring APIs and testing them to see what would work best for the project. Once I found one that provided the data I wanted, I immediately got to work on building out the React app with fetch calls to get the data and store it to use as I built out functionality. In a matter of a few days, I was able to build out all of the app functionality and then spend the rest of the time end-to-end testing, implementing page design, and managing error handling.
+The app was originally built using a third party API to supply word associations. I planned my project to front-load the functionality of the app, knowing that I would be traveling and working in an unfamiliar place for the second half of the week. On the first day, I spent the morning exploring APIs and testing them to see what would work best for the project. Once I found one that provided the data I wanted, I immediately got to work on building out the React app with fetch calls to get the data and store it to use as I built out functionality. In a matter of a few days, I was able to build out all of the app functionality and then spend the rest of the time end-to-end testing, implementing page design, and managing error handling.
 
 ### Reflection
 
-This project was perfect for solidifying what I learned over the course of this 6-week portion of the Turing front end program. I do feel that I met my learning goals and feel more confident, efficient, and comfortable building a React app from scratch and independently.
+This project was perfect for solidifying what I learned over the course of mod 3 (a block of 6 weeks) of the Turing front end program. I do feel that I met my learning goals and feel more confident, efficient, and comfortable building a React app from scratch and independently.
 
 I had a lot of fun building this app as the first app that I genuinely feel my friends will enjoy using. Having the framing of "what does this person need from this app?" made it easier to plan and shift gears when necessary and I really enjoyed that aspect of the development. I am particularly excited in the future to develop apps with specific users in mind because it helped me understand the why behind everything I was doing and I felt more invested in the product.
 
