@@ -10,8 +10,16 @@
 
 ## Overview
 
-### Deploy Link
+### Links
+
+#### Front End Deploy Link
 https://the-random-gender-ator.herokuapp.com/
+
+#### Back End Repository
+https://github.com/RMartin0717/random-gender-ator-api
+
+#### Back End Deploy Link
+https://the-random-gender-ator-api.herokuapp.com/
 
 ### Description
 
