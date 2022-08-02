@@ -41,11 +41,12 @@ There are a couple of minor issues to address with the app. I am currently learn
 
 ### Notable features
 
+ - Consumes data from its own API, built specifically for this app
  - Use of Router to enable user to navigate to multiple pages and to navigate using back and forward browser controls.
  - Tested with Cypress acceptance testing including the use of stubbed fetch data and happy/sad paths
  - Utilized responsive design for mobile or desktop viewing
  - Utilized a modular file structure for easy file navigation
- - The ability to create random genders using word association results from a public API
+ - The ability to create random genders using word association results from the connected API
  - The ability to save favorite genders to local storage and view them on a Saved Genders page
  - 100% Lighthouse accessibility audit
 
