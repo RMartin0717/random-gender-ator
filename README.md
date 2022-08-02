@@ -33,7 +33,7 @@ On the home page, the user is able to interact with a gender generator which use
 
 I am currently learning to set up automatic deployment with heroku and then will resolve the following issues.
 
-A major issue that I will be working on resolving is the screen reader and tabbing accessibility of the app. When I originally built out the app for a school project, I used https://coolors.co/ to check for color blindness accessibility and Lighthouse to run an accessibility audit. Since working for 9 months in a company following AA OWASP Guidelines and gaining a deeper knowledge of building accessible client-facing apps, I've learned how to more effectively test the accessibility of apps and found that this app is not tab and screen reader accessible. My most important next step for this app will be addressing this.
+- A major issue that I will be working on resolving is the screen reader and tabbing accessibility of the app. When I originally built out the app for a school project, I used https://coolors.co/ to check for color blindness accessibility and Lighthouse to run an accessibility audit. Since working for 9 months in a company following AA OWASP Guidelines and gaining a deeper knowledge of building accessible client-facing apps, I've learned how to more effectively test the accessibility of apps and found that this app is not tab and screen reader accessible. My most important next step for this app will be addressing this.
 
 There are also a couple of minor issues to address with the app. 
 
