@@ -37,6 +37,7 @@ A major issue that I will be working on resolving is the screen reader and tabbi
 
 There are also a couple of minor issues to address with the app. 
 
+- I think the overall design, which I did not spend as much time with when faced with a one week deadline, could use an update
 - The title image needs to be updated so that it is a rainbow icon instead of the React logo.
 - There is a sentence in the About page that is repeated and one needs to be removed.
 - Intend to add aria attributes to HTML.
