@@ -10,8 +10,16 @@
 
 ## Overview
 
-### Deploy Link
+### Links
+
+#### Front End Deploy Link
 https://the-random-gender-ator.herokuapp.com/
+
+#### Back End Repository
+https://github.com/RMartin0717/random-gender-ator-api
+
+#### Back End Deploy Link
+https://the-random-gender-ator-api.herokuapp.com/
 
 ### Description
 
@@ -22,8 +30,11 @@ On the home page, the user is able to interact with a gender generator which use
 ## In Progress
 
 ### Automatic Deployment for Patch Work
-There are a couple of minor issues to address with the app. I am currently learning to set up automatic deployment with heroku and then will resolve these issues.
 
+I am currently learning to set up automatic deployment with heroku and then will resolve the following issues.
+
+- A major issue that I will be working on resolving is the screen reader and tabbing accessibility of the app. When I originally built out the app for a school project, I used https://coolors.co/ to check for color blindness accessibility and Lighthouse to run an accessibility audit. Since working for 9 months in a company following AA OWASP Guidelines and gaining a deeper knowledge of building accessible client-facing apps, I've learned how to more effectively test the accessibility of apps and found that this app is not tab and screen reader accessible. My most important next step for this app will be addressing this.
+- I think the overall design, which I did not spend as much time with when faced with a one week deadline, could use an update
 - The title image needs to be updated so that it is a rainbow icon instead of the React logo.
 - There is a sentence in the About page that is repeated and one needs to be removed.
 - Intend to add aria attributes to HTML.
@@ -33,11 +44,12 @@ There are a couple of minor issues to address with the app. I am currently learn
 
 ### Notable features
 
+ - Consumes data from its own API, built specifically for this app
  - Use of Router to enable user to navigate to multiple pages and to navigate using back and forward browser controls.
  - Tested with Cypress acceptance testing including the use of stubbed fetch data and happy/sad paths
  - Utilized responsive design for mobile or desktop viewing
  - Utilized a modular file structure for easy file navigation
- - The ability to create random genders using word association results from a public API
+ - The ability to create random genders using word association results from the connected API
  - The ability to save favorite genders to local storage and view them on a Saved Genders page
  - 100% Lighthouse accessibility audit
 
