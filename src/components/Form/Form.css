@@ -33,7 +33,7 @@ select:hover {
   width: 65vw;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 900px) {
   .selection-container {
     width: 90vw;
   }
