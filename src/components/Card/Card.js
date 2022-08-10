@@ -13,8 +13,8 @@ const Card = ({ gender, saveGender, delGender }) => {
           <div className='gender-card' id={gender.id}>
             <h3 className='new-gender content'>{gender.gender}</h3>
             <div className='content'>
-              <button className='card-btn' onClick={(event) => saveGender(gender.gender, gender.id)}>Save Gender</button>
-              <button className='card-btn' onClick={(event) => delGender(gender.id)}>Delete Gender</button>
+              <button className='card-btn save-button' onClick={(event) => saveGender(gender.gender, gender.id)}>Save Gender</button>
+              <button className='card-btn delete-button' onClick={(event) => delGender(gender.id)}>Delete Gender</button>
             </div>
           </div>
         </div>
