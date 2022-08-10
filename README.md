@@ -33,10 +33,6 @@ On the home page, the user is able to interact with a gender generator which use
 
 I am currently learning to set up automatic deployment with heroku and then will resolve the following issues.
 
-- A major issue that I will be working on resolving is the screen reader and tabbing accessibility of the app. When I originally built out the app for a school project, I used https://coolors.co/ to check for color blindness accessibility and Lighthouse to run an accessibility audit. Since working for 9 months in a company following AA OWASP Guidelines and gaining a deeper knowledge of building accessible client-facing apps, I've learned how to more effectively test the accessibility of apps and found that this app is not tab and screen reader accessible. My most important next step for this app will be addressing this.
-- I think the overall design, which I did not spend as much time with when faced with a one week deadline, could use an update
-- The title image needs to be updated so that it is a rainbow icon instead of the React logo.
-- There is a sentence in the About page that is repeated and one needs to be removed.
 - Intend to add aria attributes to HTML.
 - Would like to update with newest versions of React and React Router.
 
@@ -52,6 +48,7 @@ I am currently learning to set up automatic deployment with heroku and then will
  - The ability to create random genders using word association results from the connected API
  - The ability to save favorite genders to local storage and view them on a Saved Genders page
  - 100% Lighthouse accessibility audit
+ - Tab and screen reader accessible
 
 ### Installation
 1. Clone down this [repo](https://github.com/RMartin0717/random-gender-ator)

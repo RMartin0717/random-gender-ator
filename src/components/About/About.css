@@ -2,11 +2,22 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
+}
+
+.question {
+  padding: 1vw 3vw;
+}
+
+.play {
+  margin: 3vw;
 }
 
 .ways-to-play {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2vw;
   border: 1px solid white;
   border-radius: 15px;
   background: linear-gradient(-45deg, #7800b0, #02d4e3, #f7f302, #d60408);
@@ -35,13 +46,11 @@
 
 .card-p {
   margin-bottom: 1vw;
+  width: 80vw;
 }
 
-@media screen and (max-width: 480px) {
-
-
-  .ways-to-play {
-    display: flex;
-    flex-direction: column;
+@media screen and (max-width: 900px) {
+  .prompt-card {
+    padding: 5vw;
   }
 }

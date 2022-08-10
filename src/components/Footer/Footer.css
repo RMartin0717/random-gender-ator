@@ -3,11 +3,11 @@
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
-  margin: 2vw;
+  margin: 1vw;
 }
 
 .resources {
-  margin: 5vw;
+  margin: 1vw;
   font-size: .75em;
 }
 
