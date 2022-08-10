@@ -6,12 +6,12 @@ const Card = ({ gender, saveGender, delGender }) => {
   return(
     <div className='card-container'>
       {!gender &&
-        <h4 className='no-gender'>No Gender Yet</h4>
+        <h3 className='no-gender'>No Gender Yet</h3>
       }
       {gender &&
         <div className='card-outline'>
           <div className='gender-card' id={gender.id}>
-            <h4 className='new-gender content'>{gender.gender}</h4>
+            <h3 className='new-gender content'>{gender.gender}</h3>
             <div className='content'>
               <button className='card-btn' onClick={(event) => saveGender(gender.gender, gender.id)}>Save Gender</button>
               <button className='card-btn' onClick={(event) => delGender(gender.id)}>Delete Gender</button>
