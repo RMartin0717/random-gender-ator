@@ -8,9 +8,9 @@ const Header = () => {
       <header className='header title'>
         <h1 className='page-heading'>The Random Gender-ator</h1>
         <div className="button-container">
-          <Link to='/'><button className='home-btn link-btn'>Home</button></Link>
-          <Link to='/about'><button className='about-btn link-btn'>About</button></Link>
-          <Link to='/savedgenders'><button className='saved-btn link-btn'>Saved Genders</button></Link>
+          <Link to='/'><button className='link-btn'>Home</button></Link>
+          <Link to='/about'><button className='link-btn'>About</button></Link>
+          <Link to='/savedgenders'><button className='link-btn'>Saved Genders</button></Link>
         </div>
       </header>
     </div>

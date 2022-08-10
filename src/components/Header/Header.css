@@ -34,13 +34,13 @@
 }
 
 .page-heading {
-  width: 45vw;
+  width: 50vw;
   padding: 1vw;
   border: 1px solid white;
   border-radius: 15px;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 900px) {
   .header {
     width: 90vw;
     font-size: 1em;

@@ -9,6 +9,10 @@ select {
   width: 30vw;
 }
 
+select:hover {
+  transform: scale(1.1);
+}
+
 .form-container {
   display: flex;
   flex-direction: column;

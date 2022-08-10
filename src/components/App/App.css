@@ -11,7 +11,16 @@ a {
 button {
   border: 1px solid white;
   border-radius: 15px;
-  margin: 2px;
+  margin: 2px 4px;
+  width: 8em;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:active {
+  background: linear-gradient(-45deg, #f7f302, #d60408, #7800b0, #02d4e3);
 }
 
 .main-page {
